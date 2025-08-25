@@ -34,31 +34,114 @@ nav a {
 }
 
 .hero-image img {
-  width: 100%;
-  height: auto;
+   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
   display: block;
 }
 
-.offerings {
-  padding: 2rem;
+.hero-image {
+  width: 100%;
+  height: 70vh; /* Full viewport height */
+  object-fit: cover;
+  object-position: center botto;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;       /* position over the image */
+  top: 50%;                 /* vertically center */
+  left: 50%;                /* horizontally center */
+  transform: translate(-50%, -50%);
+  color: white;             /* text color */
   text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.hero-text h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+.offerings {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.offering-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
 .offering-item {
-  display: flex;
-  align-items: center;
-  margin: 1rem auto;
-  max-width: 600px;
   background: #fff;
+  border-radius: 12px;
   padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  max-width: 250px;
+  text-align: center;
 }
 
 .offering-item img {
-  width: 60px;
-  margin-right: 1rem;
+  width: 100%;        /* Make image take full width of the box */
+  height: 200px;      /* Set consistent height for all images */
+  object-fit: cover;  /* Crop and scale to fit without distortion */
+  border-radius: 8px; /* Rounded corners */
+  display: block;
+  margin: 0 auto 1rem;
 }
+
+@media (min-width: 768px) {
+  .offerings {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+
+.offerings h2 {
+ font-family: 'Quicksand', 'Comic Sans MS', 'Comic Sans', cursive, 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #888; /* soft playful grey */
+  letter-spacing: 0.03em;
+  background: linear-gradient(90deg, #f5f5f5 60%, #e0e0e0 100%);
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  transition: background 0.2s;
+}
+
+.offering-item p,
+.offering-item .offering-text {
+  color: #666;                /* Soft grey for calmness */
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.6;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+
+  padding: 0.5rem 0.7rem;
+  transition: background 0.2s;
+}
+
+.offering-item p:hover,
+.offering-item .offering-text:hover {
+  background: #e0e0e0;        /* gentle highlight on hover */
+}
+
 
 .about-section {
   display: flex;
