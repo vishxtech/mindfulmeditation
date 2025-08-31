@@ -373,6 +373,19 @@ footer {
 
 /* Connect PAGE CSS */
 
+.connect-section h2 {
+ font-family: 'Quicksand', 'Comic Sans MS', 'Comic Sans', cursive, 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-weight: bold;
+  color: #2e4a2f;
+  margin: 0;
+  border-bottom: 2px solid #81c784; 
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-bottom: 25px; 
+}
+
 .connect-section {
   max-width: 600px;
   margin: 60px auto;
@@ -381,6 +394,7 @@ footer {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   text-align: center;
+  font-family: 'Quicksand', sans-serif; 
 }
 
 .connect-section h1 {
@@ -395,7 +409,8 @@ form textarea {
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 16px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95em;
 }
 
 form button {
